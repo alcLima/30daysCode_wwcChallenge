@@ -9,8 +9,12 @@ function setDate() {
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
   console.log(currentSeconds, secondsDegrees);
 
-  if(currentSeconds == 0){
-    secondHand.addcla
+  if (currentSeconds == 0) {
+    secondHand.classList.add("hand_zero");
+  }
+
+  if (currentSeconds != 0) {
+    secondHand.classList.remove("hand_zero");
   }
 
   const currentMinutes = now.getMinutes();
